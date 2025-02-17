@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <section class="mb-5">
+        <div class="container">
+            <nav>
+                <div class="nav nav-tabs nav-border" id="nav-tab" role="tablist">
+                    <a class="nav-link active nav-edit" id="nav-home-tab" data-toggle="tab" href="#nav-basic" role="tab"
+                        aria-controls="nav-home" aria-selected="true">Basic information</a>
+                    <a class="nav-link nav-edit" id="nav-verify-tab" data-toggle="tab" href="#nav-verify" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">Verification documents</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-basic" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="col-md-8 p-5">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress2">Address 2</label>
+                                <input type="text" class="form-control" id="inputAddress2"
+                                    placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="nav-verify" role="tabpanel" aria-labelledby="nav-verify-tab">
+                    <div class="col-md-8 py-5 px-4">
+                        <p>You'll need to provide identification before you complete booking.so get a head<br> strat by
+                            giving it now.</p>
+                        <form>
+                            <div class="form-row">
+
+                                <div class="form-group col-md-6">
+                                    <label for="ID">Select ID type</label>
+                                    <select id="ID" class="form-control">
+                                        <option selected>Passport</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="idnumber">Enter ID number</label>
+                                    <input type="text" class="form-control" id="idnumber">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>ID Proof(front)</label>
+                                    <div>
+                                        <input name="image" type="file" id="prooffront" hidden />
+                                        <label for="prooffront" class="div-bg">
+                                            <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+                                            <span class="upload-head">Upload ID front</span>
+                                            <span class="upload-para">(.jpeg, .pdf, .png)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>ID Proof(Back)</label>
+                                    <div>
+                                        <input name="image" type="file" id="prooffront" hidden />
+                                        <label for="prooffront" class="div-bg">
+                                            <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+                                            <span class="upload-head">Upload ID Back</span>
+                                            <span class="upload-para">(.jpeg, .pdf, .png)</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+    </section>
+    <div class="container">
+        <h1 class="mb-3">Content Editable Demo</h1>
+        <p id="edit" class="edit px-3 mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nesciunt
+            accusamus quo
+            modi
+            facere? Quo
+            corporis saepe maiores suscipit repudiandae illo? Quae facilis est, in earum commodi eos distinctio.
+            Incidunt distinctio sapiente molestias ad accusamus natus neque unde soluta deleniti reprehenderit ea libero
+            iusto nihil modi eum, ut eligendi voluptatem?</p>
+        <div class="text-center">
+            <button type="submit" onclick="editfunction()" class="btn btn-danger px-5">Edit
+                the content</button>
+        </div>
+
+
+    </div>
+
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const paragraph = document.querySelector("#edit");
+        function editfunction() {
+            paragraph.contentEditable = true;
+            paragraph.style.border = "2px solid #000";
+            paragraph.style.padding = "5px 10px";
+        }
+        // document.getElementsByClassName('container').onclick = function (e) {
+        //     if (e.target != document.getElementById('edit')) {
+        //         console.log('You clicked outside');
+        //     } else {
+        //         console.log('You clicked inside');
+        //     }
+        // }
+
+
+    </script>
+
+</body>
+
+</html>
